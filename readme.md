@@ -79,5 +79,5 @@ sudo bash post-install.sh
 - Ensure multilib is enabled for Steam (/etc/pacman.conf).
 - Recommended for personal laptops and dev machines, especially ASUS + NVIDIA setups.
 
-🐧 License
+## 🐧 License
 MIT — feel free to fork and modify.
