@@ -59,7 +59,7 @@ This script automates the installation of essential tools, developer environment
 
 1. Complete Arch install with KDE via `archinstall`
 2. Download or clone this repo:
-  ```bash
+   ```bash
    git clone https://github.com/yourusername/arch-postinstall
    cd arch-postinstall
    ```
@@ -68,8 +68,8 @@ This script automates the installation of essential tools, developer environment
   chmod +x post-install.sh
   ```
 4. Run the script as root:
-```bash
-  sudo ./post-install.sh
+  ```bash
+  sudo bash post-install.sh
   ```
 
 ## 🧠 Notes
