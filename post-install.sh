@@ -14,7 +14,7 @@ sudo -u $USER makepkg -si --noconfirm
 
 echo "[*] Installing essential packages..."
 pacman -S --noconfirm kitty gparted git neovim python-pip gcc cmake make tmux \
-  zeromq zmqpp alsa-lib systemd go nodejs fastfetch gimp xournalpp #snapper
+  zeromq zmqpp alsa-lib systemd go nodejs fastfetch gimp xournalpp
 
 echo "[*] Installing AUR packages with yay..."
 sudo -u $USER yay -S --noconfirm google-chrome visual-studio-code-bin discord steam \
@@ -40,10 +40,6 @@ cp -r /tmp/grub/src/catppuccin-mocha-grub-theme /usr/share/grub/themes/
 sed -i 's|^#GRUB_TERMINAL_OUTPUT=.*|# GRUB_TERMINAL_OUTPUT="console"|' /etc/default/grub
 echo 'GRUB_THEME="/usr/share/grub/themes/catppuccin-mocha-grub-theme/theme.txt"' >>/etc/default/grub
 grub-mkconfig -o /boot/grub/grub.cfg
-
-#echo "[*] Creating initial Snapper snapshot..."
-#snapper -c root create-config /
-#snapper create --description "Initial setup"
 
 #echo "[*] Setting up NVIDIA drivers..."
 #pacman -S --noconfirm nvidia nvidia-utils nvidia-settings nvidia-prime
