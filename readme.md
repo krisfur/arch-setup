@@ -8,6 +8,8 @@ A post-install automation script for Arch Linux systems using **KDE Plasma** and
 
 This script automates the installation of essential tools, developer environments, themes, and optional desktop software. It's designed to be run **after `archinstall` completes and before your first reboot**, or right after your first login.
 
+![screenshot](screenshot.png)
+
 ---
 
 ## 📦 Installs
