@@ -5,6 +5,9 @@ set -e
 USER=kfurman
 HOME_DIR="/home/$USER"
 
+echo "[*] Updating system packages..."
+pacman -Syu --noconfirm
+
 echo "[*] Installing yay..."
 cd /opt
 git clone https://aur.archlinux.org/yay.git
@@ -18,7 +21,7 @@ pacman -S --noconfirm kitty gparted git neovim python-pip gcc cmake make tmux \
 
 echo "[*] Installing AUR packages with yay..."
 sudo -u $USER yay -S --noconfirm google-chrome visual-studio-code-bin discord steam \
-  lazyvim github-cli #asusctl supergfxctl asusctl-rog-gui
+  lazyvim github-cli asusctl supergfxctl asusctl-rog-gui
 
 echo "[*] Setting up editor..."
 echo "export EDITOR=/usr/bin/nvim" >>/etc/profile
@@ -41,14 +44,14 @@ sed -i 's|^#GRUB_TERMINAL_OUTPUT=.*|# GRUB_TERMINAL_OUTPUT="console"|' /etc/defa
 echo 'GRUB_THEME="/usr/share/grub/themes/catppuccin-mocha-grub-theme/theme.txt"' >>/etc/default/grub
 grub-mkconfig -o /boot/grub/grub.cfg
 
-#echo "[*] Setting up NVIDIA drivers..."
-#pacman -S --noconfirm nvidia nvidia-utils nvidia-settings nvidia-prime
-#echo "nvidia nvidia_modeset nvidia_uvm nvidia_drm" >>/etc/mkinitcpio.conf
-#mkinitcpio -P
-#bootctl update || grub-mkconfig -o /boot/grub/grub.cfg
-#systemctl enable nvidia-hibernate.service nvidia-suspend.service nvidia-resume.service nvidia-powerd.service
+echo "[*] Setting up NVIDIA drivers..."
+pacman -S --noconfirm nvidia nvidia-utils nvidia-settings nvidia-prime
+echo "nvidia nvidia_modeset nvidia_uvm nvidia_drm" >>/etc/mkinitcpio.conf
+mkinitcpio -P
+bootctl update || grub-mkconfig -o /boot/grub/grub.cfg
+systemctl enable nvidia-hibernate.service nvidia-suspend.service nvidia-resume.service nvidia-powerd.service
 
-#echo "[*] Setting up ASUS drivers..."
-#systemctl enable supergfxd.service
+echo "[*] Setting up ASUS drivers..."
+systemctl enable supergfxd.service
 
 echo "[✔] Post-install complete! Reboot recommended."
