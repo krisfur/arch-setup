@@ -17,11 +17,11 @@ sudo -u $USER makepkg -si --noconfirm
 
 echo "[*] Installing essential packages..."
 pacman -S --noconfirm kitty gparted git neovim python-pip gcc cmake make tmux \
-  zeromq zmqpp alsa-lib systemd go nodejs fastfetch gimp xournalpp
+  zeromq alsa-lib systemd go nodejs fastfetch gimp xournalpp
 
 echo "[*] Installing AUR packages with yay..."
 sudo -u $USER yay -S --noconfirm google-chrome visual-studio-code-bin discord steam \
-  lazyvim github-cli asusctl supergfxctl asusctl-rog-gui
+  lazyvim github-cli zmqpp asusctl supergfxctl asusctl-rog-gui
 
 echo "[*] Setting up editor..."
 echo "export EDITOR=/usr/bin/nvim" >>/etc/profile
