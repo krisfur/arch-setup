@@ -17,7 +17,7 @@ sudo -u $USER makepkg -si --noconfirm
 
 echo "[*] Installing essential packages..."
 pacman -S --noconfirm kitty gparted git neovim python-pip gcc cmake make tmux \
-  zeromq alsa-lib systemd go nodejs fastfetch gimp xournalpp
+  zeromq npm alsa-lib systemd go nodejs fastfetch gimp xournalpp
 
 echo "[*] Installing AUR packages with yay..."
 sudo -u $USER yay -S --noconfirm google-chrome visual-studio-code-bin discord steam \

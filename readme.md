@@ -28,6 +28,7 @@ This script automates the installation of essential tools, developer environment
 - `gcc`, `cmake`, `make`
 - `zeromq`, `zmqpp`
 - `go`
+- `npm`
 - `nodejs`
 - `python3-pip`
 - `tmux`
