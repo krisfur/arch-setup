@@ -1,12 +1,12 @@
 # 🛠️ Arch Post-Install Script (Kris Edition)
 
-A post-install automation script for Arch Linux systems using **KDE Plasma** and **NVIDIA graphics**, designed to quickly set up a development- and daily-use-ready desktop after a fresh install with `archinstall`.
+A post-install series of commands for Arch Linux systems using **KDE Plasma** and **NVIDIA graphics**, designed to quickly set up a development- and daily-use-ready desktop after a fresh install with `archinstall`.
 
 ---
 
 ## 🚀 What This Script Does
 
-This script automates the installation of essential tools, developer environments, themes, and optional desktop software. It's designed to be run **after `archinstall` completes and before your first reboot**, or right after your first login.
+This scripts install essential tools, developer environments, themes, and optional desktop software. It's designed to be run **after `archinstall` completes and before your first reboot**, or right after your first login.
 
 ![screenshot](screenshot.png)
 
@@ -67,15 +67,7 @@ This script automates the installation of essential tools, developer environment
 git clone https://github.com/yourusername/arch-postinstall
 cd arch-postinstall
 ```
-3. Make the script executable:
-```bash
-chmod +x post-install.sh
-```
-
-4. Run the script as root:
-```bash
-sudo bash post-install.sh
-```
+3. Run commands one by one
 
 ## 🧠 Notes
 - Assumes your username is kfurman — update the script if it's different.
