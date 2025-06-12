@@ -51,7 +51,7 @@ sudo usermod -aG docker kfurman
 # Setting up NVIDIA drivers
 sudo pacman -S --noconfirm nvidia nvidia-utils nvidia-settings nvidia-prime
 sudo nvim /etc/mkinitcpio.conf
-#add: MODULES="nvidia nvidia_modeset nvidia_uvm nvidia_drm"
+#add: MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm)
 sudo mkinitcpio -P
 sudo bootctl update 
 sudo grub-mkconfig -o /boot/grub/grub.cfg
