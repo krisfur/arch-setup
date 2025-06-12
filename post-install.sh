@@ -44,6 +44,12 @@ sed -i 's|^#GRUB_TERMINAL_OUTPUT=.*|# GRUB_TERMINAL_OUTPUT="console"|' /etc/defa
 echo 'GRUB_THEME="/usr/share/grub/themes/catppuccin-mocha-grub-theme/theme.txt"' >>/etc/default/grub
 grub-mkconfig -o /boot/grub/grub.cfg
 
+echo "[*] Installing Docker..."
+pacman -S --noconfirm docker
+systemctl enable docker.service
+systemctl start docker.service
+usermod -aG docker kfurman
+
 echo "[*] Setting up NVIDIA drivers..."
 pacman -S --noconfirm nvidia nvidia-utils nvidia-settings nvidia-prime
 echo "nvidia nvidia_modeset nvidia_uvm nvidia_drm" >>/etc/mkinitcpio.conf
