@@ -31,6 +31,7 @@ This script automates the installation of essential tools, developer environment
 - `nodejs`
 - `python3-pip`
 - `tmux`
+- `docker`
 
 ### 🌐 Web & Communication
 - `google-chrome` (AUR)
