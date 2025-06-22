@@ -21,6 +21,7 @@ This scripts install essential tools, developer environments, themes, and option
 - `fastfetch` — stylish system info
 - `gh` (GitHub CLI) — via AUR
 - `yay` — AUR helper
+- `iw` - for setting WiFi region
 
 ### 🧑‍💻 Developer Toolchain
 - `git`

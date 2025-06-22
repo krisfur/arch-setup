@@ -14,6 +14,12 @@ sudo makepkg -si --noconfirm
 sudo pacman -S --noconfirm kitty gparted git neovim python-pip gcc cmake make tmux \
   zeromq npm alsa-lib systemd go nodejs fastfetch gimp xournalpp
 
+# Set wifi region correctly
+pacman -Sy --needed --noconfirm iw wireless-regdb
+echo 'WIRELESS_REGDOM="GB"' >/etc/conf.d/wireless-regdom
+mkinitcpio -P
+iw reg set GB
+
 # Installing AUR packages with yay
 yay -S --noconfirm google-chrome visual-studio-code-bin discord steam \
   lazyvim github-cli zmqpp cursor-bin asusctl supergfxctl asusctl-rog-gui
