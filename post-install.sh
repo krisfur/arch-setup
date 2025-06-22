@@ -16,7 +16,7 @@ sudo pacman -S --noconfirm kitty gparted git neovim python-pip gcc cmake make tm
 
 # Installing AUR packages with yay
 yay -S --noconfirm google-chrome visual-studio-code-bin discord steam \
-  lazyvim github-cli zmqpp asusctl supergfxctl asusctl-rog-gui
+  lazyvim github-cli zmqpp cursor-bin asusctl supergfxctl asusctl-rog-gui
 
 # Setting up editor
 sudo nvim /etc/profile
@@ -53,7 +53,7 @@ sudo pacman -S --noconfirm nvidia nvidia-utils nvidia-settings nvidia-prime
 sudo nvim /etc/mkinitcpio.conf
 #add: MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm)
 sudo mkinitcpio -P
-sudo bootctl update 
+sudo bootctl update
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 sudo systemctl enable nvidia-hibernate.service nvidia-suspend.service nvidia-resume.service nvidia-powerd.service
 
