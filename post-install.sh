@@ -12,7 +12,7 @@ sudo makepkg -si --noconfirm
 
 # Installing essential packages
 sudo pacman -S --noconfirm kitty gparted git neovim python-pip gcc cmake make tmux \
-  zeromq npm alsa-lib systemd go nodejs fastfetch gimp xournalpp
+  zeromq npm raylib alsa-lib systemd go nodejs fastfetch gimp xournalpp
 
 # Set wifi region correctly
 pacman -Sy --needed --noconfirm iw wireless-regdb

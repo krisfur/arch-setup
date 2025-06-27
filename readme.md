@@ -28,6 +28,7 @@ This scripts install essential tools, developer environments, themes, and option
 - `rustup` (Rust toolchain installer)
 - `gcc`, `cmake`, `make`
 - `zeromq`, `zmqpp`
+- `raylib`
 - `go`
 - `npm`
 - `nodejs`
