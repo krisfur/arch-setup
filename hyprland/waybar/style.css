@@ -1,0 +1,58 @@
+@import "mocha.css";
+
+* {
+  font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free", sans-serif;
+  font-size: 14px;
+  min-height: 0;
+}
+
+#waybar {
+  background-color: transparent;
+  color: @text;
+  padding: 6px 10px;
+}
+
+#battery,
+#network,
+#clock,
+#tray,
+#custom-power,
+#wlr-workspaces {
+  background-color: @surface0;
+  margin: 0 5px;
+  padding: 6px 12px;
+  border-radius: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+#battery:hover,
+#network:hover,
+#clock:hover,
+#custom-power:hover {
+  background-color: @surface1;
+}
+
+/* Colors */
+#battery {
+  color: @green;
+}
+
+#battery.warning {
+  color: @yellow;
+}
+
+#battery.critical {
+  color: @red;
+}
+
+#network {
+  color: @blue;
+}
+
+#clock {
+  color: @mauve;
+}
+
+#custom-power {
+  color: @red;
+}
