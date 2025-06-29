@@ -1,6 +1,8 @@
 # Hyprland specific things:
 
-1. Install `hyprland` requirements:
+1. Place wallpaper (i.e. `aqua.png`) in `~/Pictures/`.
+
+2. Install `hyprland` requirements:
 
 `pacman`
 
@@ -18,9 +20,9 @@ sudo pacman -S \
 yay -S google-chrome
 ```
 
-2. Copy `hyprland.conf` and `hyprpaper.conf` to ``~/.config/hypr/`
+3. Copy `hyprland.conf` and `hyprpaper.conf` to `~/.config/hypr/`.
 
-3. Install waybar and requirements:
+4. Install `waybar` requirements:
 
 `pacman`
 
@@ -42,4 +44,4 @@ yay -S nerd-fonts-jetbrains-mono \
   wlogout
 ```
 
-4. Copy `/waybar/` to `/etc/xdg/waybar/`.
+5. Copy `/waybar/` to `/etc/xdg/waybar/`.
