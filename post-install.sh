@@ -14,6 +14,8 @@ sudo makepkg -si --noconfirm
 sudo pacman -S --noconfirm kitty gparted git neovim python-pip gcc cmake make tmux \
   zeromq npm raylib alsa-lib systemd go nodejs fastfetch gimp xournalpp
 
+# Get kitty theme from https://github.com/catppuccin/kitty/blob/main/themes/mocha.conf
+
 # Set wifi region correctly
 pacman -Sy --needed --noconfirm iw wireless-regdb
 echo 'WIRELESS_REGDOM="GB"' >/etc/conf.d/wireless-regdom
@@ -22,7 +24,7 @@ iw reg set GB
 
 # Installing AUR packages with yay
 yay -S --noconfirm google-chrome visual-studio-code-bin discord steam \
-  lazyvim github-cli zmqpp cursor-bin asusctl supergfxctl asusctl-rog-gui
+  github-cli zmqpp cursor-bin asusctl supergfxctl
 
 # Setting up editor
 sudo nvim /etc/profile
